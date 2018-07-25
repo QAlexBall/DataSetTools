@@ -130,7 +130,7 @@ class LabelTool():
             self.parent.focus()
             self.category = int(s)
         else:
-            s = r'j:/MyVOC'
+            s = r'/home/alex/000/'
         ##        if not os.path.isdir(s):
         ##            tkMessageBox.showerror("Error!", message = "The specified dir doesn't exist!")
         ##            return
