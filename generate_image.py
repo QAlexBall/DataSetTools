@@ -13,10 +13,10 @@ h0 = 1;  # 图片原始高度
 # colors for the bboxes
 COLORS = ['red', 'blue', 'yellow', 'pink', 'cyan', 'green', 'black']
 # image sizes for the examples
-SIZE = 256, 256
+SIZE = 512, 512
 
 # 指定缩放后的图像大小
-DEST_SIZE = 500, 500
+DEST_SIZE = 1000, 1000
 
 
 class LabelTool():
@@ -130,7 +130,7 @@ class LabelTool():
             self.parent.focus()
             self.category = int(s)
         else:
-            s = r'/home/alex/000/'
+            s = r'/Users/chriszhu/Pictures/cerie/1/0'
         ##        if not os.path.isdir(s):
         ##            tkMessageBox.showerror("Error!", message = "The specified dir doesn't exist!")
         ##            return
@@ -138,7 +138,7 @@ class LabelTool():
 
         print ('self.category =%d' % (self.category))
 
-        self.imageDir = os.path.join(r'/home/alex/000/', '%03d/' % (self.category))
+        self.imageDir = os.path.join(r'/Users/chriszhu/Pictures/cerie/1/0', '%03d/' % (self.category))
         print(self.imageDir)
         self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
         print(self.imageList)
@@ -153,12 +153,12 @@ class LabelTool():
         self.total = len(self.imageList)
 
         # set up output dir
-        self.outDir = os.path.join(r'/home/alex/000/labels/', '%03d' % (self.category))
+        self.outDir = os.path.join(r'/Users/chriszhu/Pictures/cerie/1/0/labels/', '%03d' % (self.category))
         if not os.path.exists(self.outDir):
             os.mkdir(self.outDir)
 
         # load example bboxes
-        self.egDir = os.path.join(r'/home/alex/000/Examples/', '%03d' % (self.category))
+        self.egDir = os.path.join(r'/Users/chriszhu/Pictures/cerie/1/0/Examples/', '%03d' % (self.category))
         # if not os.path.exists(self.egDir):
         #   return
 
